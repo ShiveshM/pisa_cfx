@@ -11,7 +11,7 @@ from pisa.utils.log import set_verbosity
 
 
 if __name__ == '__main__':
-    set_verbosity(1)
+    set_verbosity(2)
 
     # livetimes = [2, 3, 4, 5, 6, 7, 8] * ureg.common_year
     livetimes = [1, 4, 16, 64] * ureg.common_year
@@ -40,7 +40,7 @@ if __name__ == '__main__':
         template_maker.update_params(re_param)
         nom_out = template_maker.get_outputs(return_sum=False)[0].pop()
 
-        re_param.value = 4 * ureg.dimensionless
+        re_param.value = 2 * ureg.dimensionless
         sf_param.value = 1234 * ureg.dimensionless
         template_maker.update_params(re_param)
         template_maker.update_params(sf_param)
@@ -94,4 +94,4 @@ if __name__ == '__main__':
             yerr=unp.std_devs(f), capsize=3, alpha=0.5, linestyle='--',
             markersize=2, linewidth=1
         )
-    fig.savefig('./images/cfx/livetime_4.png', bbox_inches='tight', dpi=150)
+    fig.savefig('./images/livetime_2_unfold_bg.png', bbox_inches='tight', dpi=150)

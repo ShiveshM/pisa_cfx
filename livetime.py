@@ -46,7 +46,7 @@ if __name__ == '__main__':
         template_maker.update_params(sf_param)
         fe = []
         for x in xrange(200):
-        # for x in xrange(2):
+        # for x in xrange(5):
             temp_out = template_maker.get_outputs(return_sum=False)[0].pop()
             nan_mask = nom_out.hist < 0.0001
             div = temp_out.hist[~nan_mask] / nom_out.hist[~nan_mask]

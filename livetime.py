@@ -45,8 +45,8 @@ if __name__ == '__main__':
         template_maker.update_params(re_param)
         template_maker.update_params(sf_param)
         fe = []
-        for x in xrange(200):
-        # for x in xrange(5):
+        # for x in xrange(200):
+        for x in xrange(5):
             temp_out = template_maker.get_outputs(return_sum=False)[0].pop()
             nan_mask = nom_out.hist < 0.0001
             div = temp_out.hist[~nan_mask] / nom_out.hist[~nan_mask]
@@ -94,4 +94,4 @@ if __name__ == '__main__':
             yerr=unp.std_devs(f), capsize=3, alpha=0.5, linestyle='--',
             markersize=2, linewidth=1
         )
-    fig.savefig('./images/livetime_2_unfold_bg.png', bbox_inches='tight', dpi=150)
+    fig.savefig('./images/test.png', bbox_inches='tight', dpi=150)

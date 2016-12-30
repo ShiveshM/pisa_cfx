@@ -11,7 +11,7 @@ from pisa.utils.log import set_verbosity
 
 
 if __name__ == '__main__':
-    set_verbosity(2)
+    set_verbosity(1)
 
     # livetimes = [2, 3, 4, 5, 6, 7, 8] * ureg.common_year
     livetimes = [1, 4, 16, 64] * ureg.common_year
@@ -45,8 +45,8 @@ if __name__ == '__main__':
         template_maker.update_params(re_param)
         template_maker.update_params(sf_param)
         fe = []
-        # for x in xrange(200):
-        for x in xrange(5):
+        for x in xrange(200):
+        # for x in xrange(5):
             temp_out = template_maker.get_outputs(return_sum=False)[0].pop()
             nan_mask = nom_out.hist < 0.0001
             div = temp_out.hist[~nan_mask] / nom_out.hist[~nan_mask]
@@ -72,16 +72,12 @@ if __name__ == '__main__':
     fig = plt.figure(figsize=(9, 5))
     ax = fig.add_subplot(111)
     ax.set_xlim(np.min(binning)-1, np.max(binning)+1)
-    ax.set_ylim(0.9, 1.1)
+    # ax.set_ylim(0.9, 1.1)
     ax.tick_params(axis='x', labelsize=14)
     ax.tick_params(axis='y', labelsize=12)
 
     ax.set_xlabel('livetime (years)', fontsize=18)
     ax.set_ylabel('mean ratio unfolded vs. truth (200 trials)', fontsize=15)
-    for ymaj in ax.yaxis.get_majorticklocs():
-        ax.axhline(y=ymaj, ls=':', color='gray', alpha=0.7, linewidth=1)
-    for xmaj in ax.xaxis.get_majorticklocs():
-        ax.axvline(x=xmaj, ls=':', color='gray', alpha=0.7, linewidth=1)
 
     def get_edges_from_cen(bincen):
         hwidth = 0.5*(bincen[1] - bincen[0])
@@ -94,4 +90,9 @@ if __name__ == '__main__':
             yerr=unp.std_devs(f), capsize=3, alpha=0.5, linestyle='--',
             markersize=2, linewidth=1
         )
-    fig.savefig('./images/test.png', bbox_inches='tight', dpi=150)
+
+    for ymaj in ax.yaxis.get_majorticklocs():
+        ax.axhline(y=ymaj, ls=':', color='gray', alpha=0.7, linewidth=1)
+    for xmaj in ax.xaxis.get_majorticklocs():
+        ax.axvline(x=xmaj, ls=':', color='gray', alpha=0.7, linewidth=1)
+    fig.savefig('./images/perpe/greco_unweighted.png', bbox_inches='tight', dpi=150)

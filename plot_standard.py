@@ -133,6 +133,7 @@ def plot_CFX_one(map, outfile, logy=False, ylim=None, ylabel=None):
     ax.tick_params(axis='x', labelsize=14)
     ax.tick_params(axis='y', labelsize=12)
 
+    # TODO(shivesh): add units
     ax.set_xlabel(energy_binning.tex, fontsize=18)
     if ylabel is not None:
         ylabel = r'{0}'.format(ylabel)

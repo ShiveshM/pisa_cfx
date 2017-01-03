@@ -1,0 +1,40 @@
+disk_cache True
+run with regularisation = 2
+run with regularisation = 0
+run with regularisation = 2, then error:
+Traceback (most recent call last):
+  File "/users/mandalia/programs/pisa/pisa/core/pipeline.py", line 556, in <module>
+    pipeline, outputs = main()
+  File "/users/mandalia/programs/pisa/pisa/core/pipeline.py", line 462, in main
+    outputs = pipeline.get_outputs(idx=args.stop_after_stage)
+  File "/common/users/mandalia/programs/pisa/pisa/utils/profiler.py", line 54, in profiled_func
+    return func(*args, **kwargs)
+  File "/users/mandalia/programs/pisa/pisa/core/pipeline.py", line 215, in get_outputs
+    outputs = stage.get_outputs(inputs=inputs)
+  File "/common/users/mandalia/programs/pisa/pisa/utils/profiler.py", line 54, in profiled_func
+    return func(*args, **kwargs)
+  File "/common/users/mandalia/programs/pisa/pisa/core/stage.py", line 567, in get_outputs
+    outputs = self._compute_outputs(inputs=self.inputs)
+  File "/common/users/mandalia/programs/pisa/pisa/utils/profiler.py", line 54, in profiled_func
+    return func(*args, **kwargs)
+  File "/common/users/mandalia/programs/pisa/pisa/stages/unfold/roounfold.py", line 164, in _compute_outputs
+    unfold_map = self.unfold_mc()
+  File "/common/users/mandalia/programs/pisa/pisa/stages/unfold/roounfold.py", line 241, in unfold_mc
+    bg_hist = self.get_bg_hist(bg_data)
+  File "/common/users/mandalia/programs/pisa/pisa/stages/unfold/roounfold.py", line 534, in get_bg_hist
+    if this_hash not in self.disk_cache:
+  File "/common/users/mandalia/programs/pisa/pisa/utils/cache.py", line 465, in __contains__
+    return self.has_key(key)
+  File "/common/users/mandalia/programs/pisa/pisa/utils/cache.py", line 469, in has_key
+    self[key]
+  File "/common/users/mandalia/programs/pisa/pisa/utils/cache.py", line 320, in __getitem__
+    data = dill.loads(bytes(data))
+  File "/data/mandalia/programs/anaconda2/envs/pisa/lib/python2.7/site-packages/dill/dill.py", line 260, in loads
+    return load(file)
+  File "/data/mandalia/programs/anaconda2/envs/pisa/lib/python2.7/site-packages/dill/dill.py", line 250, in load
+    obj = pik.load()
+  File "/data/mandalia/programs/anaconda2/envs/pisa/lib/python2.7/pickle.py", line 864, in load
+    dispatch[key](self)
+  File "/data/mandalia/programs/anaconda2/envs/pisa/lib/python2.7/pickle.py", line 1139, in load_reduce
+    value = func(*args)
+TypeError: 'str' object is not callable

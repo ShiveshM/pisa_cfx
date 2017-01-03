@@ -11,7 +11,7 @@ import numpy as np
 import h5py
 
 import icecube
-from icecube import dataclasses, dataio
+from icecube import dataclasses, dataio, genie_icetray
 
 
 class FullPaths(argparse.Action):
@@ -93,6 +93,9 @@ def load_file(path, s_parms, nu_frac=1.):
         interaction = frame['I3MCWeightDict']['InteractionType']
         volume = frame['I3MCWeightDict']['GeneratorVolume']
 
+        GENIE_x = frame['I3GENIEResultDict']['x']
+        GENIE_y = frame['I3GENIEResultDict']['y']
+
         parms['energy'].append(energy)
         parms['coszen'].append(coszen)
         parms['azimuth'].append(azimuth)
@@ -100,13 +103,15 @@ def load_file(path, s_parms, nu_frac=1.):
         parms['oneweight'].append(oneweight)
         parms['interaction'].append(interaction)
         parms['volume'].append(volume)
+        parms['GENIE_x'].append(GENIE_x)
+        parms['GENIE_y'].append(GENIE_y)
     return parms
 
 def main():
     args = parse_args()
 
     s_parms = ['energy', 'coszen', 'azimuth', 'ptype', 'oneweight',
-             'interaction', 'volume']
+               'interaction', 'volume', 'GENIE_x', 'GENIE_y']
     parms = {}
     for p in s_parms:
         parms[p] = []

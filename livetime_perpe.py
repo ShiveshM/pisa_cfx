@@ -45,8 +45,8 @@ if __name__ == '__main__':
         template_maker.update_params(re_param)
         template_maker.update_params(sf_param)
         fe = []
-        # for x in xrange(200):
-        for x in xrange(5):
+        for x in xrange(200):
+        # for x in xrange(5):
             temp_out = template_maker.get_outputs(return_sum=False)[0].pop()
             nan_mask = nom_out.hist < 0.0001
             div = temp_out.hist[~nan_mask] / nom_out.hist[~nan_mask]
@@ -95,4 +95,4 @@ if __name__ == '__main__':
         ax.axhline(y=ymaj, ls=':', color='gray', alpha=0.7, linewidth=1)
     for xmaj in ax.xaxis.get_majorticklocs():
         ax.axvline(x=xmaj, ls=':', color='gray', alpha=0.7, linewidth=1)
-    fig.savefig('./images/perpe/test.png', bbox_inches='tight', dpi=150)
+    fig.savefig('./images/perpe/leesard.png', bbox_inches='tight', dpi=150)

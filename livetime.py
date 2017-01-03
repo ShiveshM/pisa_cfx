@@ -62,8 +62,8 @@ if __name__ == '__main__':
         pipeline.update_params(sf_param)
 
         fe = []
-        # for x in xrange(200):
-        for x in xrange(2):
+        for x in xrange(200):
+        # for x in xrange(2):
             temp_out = pipeline.get_outputs().pop()
             nan_mask = nom_out.hist < 0.0001
             div = temp_out.hist[~nan_mask] / nom_out.hist[~nan_mask]
@@ -75,7 +75,7 @@ if __name__ == '__main__':
     fe = zip(*mean_perpe)
     print fe
 
-    outname = 'test'
+    outname = 'leesard'
 
     import matplotlib as mpl
     # headless mode
@@ -97,7 +97,7 @@ if __name__ == '__main__':
     ax.tick_params(axis='y', labelsize=12)
 
     ax.set_xlabel('livetime (years)', fontsize=18)
-    ax.set_ylabel('mean ratio unfolded vs. truth (200 trials)', fontsize=15)
+    ax.set_ylabel('mean ratio per pe unfolded vs. truth (200 trials)', fontsize=15)
 
     def get_edges_from_cen(bincen):
         hwidth = 0.5*(bincen[1] - bincen[0])
@@ -120,29 +120,25 @@ if __name__ == '__main__':
     mean = zip(*mean_perbin)
     print mean
 
-    fig = plt.figure(figsize=(9, 5))
-    ax = fig.add_subplot(111)
-    ax.set_xlim(np.min(binning)-1, np.max(binning)+1)
-    # ax.set_ylim(0.5, 1.5)
-    ax.tick_params(axis='x', labelsize=14)
-    ax.tick_params(axis='y', labelsize=12)
+    fig_2 = plt.figure(figsize=(9, 5))
+    ax_2 = fig_2.add_subplot(111)
+    ax_2.set_xlim(np.min(binning)-1, np.max(binning)+1)
+    # ax_2.set_ylim(0.5, 1.5)
+    ax_2.tick_params(axis='x', labelsize=14)
+    ax_2.tick_params(axis='y', labelsize=12)
 
-    ax.set_xlabel('livetime (years)', fontsize=18)
-    ax.set_ylabel('mean ratio unfolded vs. truth (200 trials)', fontsize=15)
-
-    def get_edges_from_cen(bincen):
-        hwidth = 0.5*(bincen[1] - bincen[0])
-        return np.append([bincen[0]-hwidth], bincen[:]+hwidth)
+    ax_2.set_xlabel('livetime (years)', fontsize=18)
+    ax_2.set_ylabel('mean ratio per bin unfolded vs. truth (200 trials)', fontsize=15)
 
     for f in mean:
-        ax.errorbar(
+        ax_2.errorbar(
             binning, unp.nominal_values(f), xerr=0,
             yerr=unp.std_devs(f), capsize=3, alpha=0.5, linestyle='--',
             markersize=2, linewidth=1
         )
 
-    for ymaj in ax.yaxis.get_majorticklocs():
-        ax.axhline(y=ymaj, ls=':', color='gray', alpha=0.7, linewidth=1)
-    for xmaj in ax.xaxis.get_majorticklocs():
-        ax.axvline(x=xmaj, ls=':', color='gray', alpha=0.7, linewidth=1)
-    fig.savefig('./images/perpe/'+outname+'.png', bbox_inches='tight', dpi=150)
+    for ymaj in ax_2.yaxis.get_majorticklocs():
+        ax_2.axhline(y=ymaj, ls=':', color='gray', alpha=0.7, linewidth=1)
+    for xmaj in ax_2.xaxis.get_majorticklocs():
+        ax_2.axvline(x=xmaj, ls=':', color='gray', alpha=0.7, linewidth=1)
+    fig_2.savefig('./images/perbin/'+outname+'.png', bbox_inches='tight', dpi=150)

@@ -95,4 +95,4 @@ if __name__ == '__main__':
         ax.axhline(y=ymaj, ls=':', color='gray', alpha=0.7, linewidth=1)
     for xmaj in ax.xaxis.get_majorticklocs():
         ax.axvline(x=xmaj, ls=':', color='gray', alpha=0.7, linewidth=1)
-    fig.savefig('./images/perpe/leesard.png', bbox_inches='tight', dpi=150)
+    fig.savefig('./images/perpe/greco_unfoldeff.png', bbox_inches='tight', dpi=150)

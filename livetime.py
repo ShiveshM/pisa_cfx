@@ -13,7 +13,7 @@ from pisa.utils.log import set_verbosity
 
 
 if __name__ == '__main__':
-    outname = 'leesard_stderr'
+    outname = 'test'
 
     if 'test' in outname:
         set_verbosity(0)
@@ -78,13 +78,13 @@ if __name__ == '__main__':
             div = temp_out.hist[~nan_mask] / nom_out.hist[~nan_mask]
             fe.append(div)
         for f in fe:
-            # mean_perpe[idx].append(np.mean(f))
-            t = ufloat(np.mean(unp.nominal_values(f)),
-                       np.std(unp.nominal_values(f)))
+            mean_perpe[idx].append(np.mean(f))
+            # t = ufloat(np.mean(unp.nominal_values(f)),
+            #            np.std(unp.nominal_values(f)))
             mean_perpe[idx].append(t)
-        # mean_perbin.append(np.mean(fe, axis=0).flatten())
-        a = unp.uarray(np.mean(unp.nominal_values(fe), axis=0).flatten(),
-                       np.std(unp.nominal_values(fe), axis=0).flatten())
+        mean_perbin.append(np.mean(fe, axis=0).flatten())
+        # a = unp.uarray(np.mean(unp.nominal_values(fe), axis=0).flatten(),
+        #                np.std(unp.nominal_values(fe), axis=0).flatten())
         mean_perbin.append(a)
 
     fe = zip(*mean_perpe)

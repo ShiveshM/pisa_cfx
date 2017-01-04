@@ -2,6 +2,7 @@ from copy import deepcopy
 
 import numpy as np
 import pint
+from uncertainties import ufloat
 from uncertainties import unumpy as unp
 
 from pisa import ureg, Q_
@@ -12,7 +13,12 @@ from pisa.utils.log import set_verbosity
 
 
 if __name__ == '__main__':
-    set_verbosity(1)
+    outname = 'leesard_stderr'
+
+    if 'test' in outname:
+        set_verbosity(0)
+    else:
+        set_verbosity(1)
 
     # livetimes = [2, 3, 4, 5, 6, 7, 8] * ureg.common_year
     livetimes = [1, 4, 16, 64] * ureg.common_year
@@ -62,20 +68,27 @@ if __name__ == '__main__':
         pipeline.update_params(sf_param)
 
         fe = []
-        for x in xrange(200):
-        # for x in xrange(2):
+        if 'test' in outname:
+            n_trials = 5
+        else:
+            n_trials = 200
+        for x in xrange(n_trials):
             temp_out = pipeline.get_outputs().pop()
-            nan_mask = nom_out.hist < 0.0001
+            nan_mask = (nom_out.hist == 0)
             div = temp_out.hist[~nan_mask] / nom_out.hist[~nan_mask]
             fe.append(div)
         for f in fe:
-            mean_perpe[idx].append(np.mean(f))
-        mean_perbin.append(np.mean(fe, axis=0).flatten())
+            # mean_perpe[idx].append(np.mean(f))
+            t = ufloat(np.mean(unp.nominal_values(f)),
+                       np.std(unp.nominal_values(f)))
+            mean_perpe[idx].append(t)
+        # mean_perbin.append(np.mean(fe, axis=0).flatten())
+        a = unp.uarray(np.mean(unp.nominal_values(fe), axis=0).flatten(),
+                       np.std(unp.nominal_values(fe), axis=0).flatten())
+        mean_perbin.append(a)
 
     fe = zip(*mean_perpe)
     print fe
-
-    outname = 'leesard'
 
     import matplotlib as mpl
     # headless mode
@@ -118,7 +131,7 @@ if __name__ == '__main__':
     fig.savefig('./images/perpe/'+outname+'.png', bbox_inches='tight', dpi=150)
 
     mean = zip(*mean_perbin)
-    print mean
+    print np.array(mean)
 
     fig_2 = plt.figure(figsize=(9, 5))
     ax_2 = fig_2.add_subplot(111)

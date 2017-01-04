@@ -22,11 +22,11 @@ if __name__ == '__main__':
     pipeline = Pipeline('settings/pipeline/example_cfx.cfg')
     gen_pipe = Pipeline('settings/pipeline/gen_lvl.cfg')
 
-    # sync dataset
-    p_dsc = pipeline.params['data_sample_config']
-    g_dsc = gen_pipe.params['data_sample_config']
-    g_dsc = p_dsc
-    gen_pipe.update_params(g_dsc)
+    # # sync dataset
+    # p_dsc = pipeline.params['data_sample_config']
+    # g_dsc = gen_pipe.params['data_sample_config']
+    # g_dsc = p_dsc
+    # gen_pipe.update_params(g_dsc)
 
     re_param = pipeline.params['regularisation']
     sf_param = pipeline.params['stat_fluctuations']
@@ -75,7 +75,7 @@ if __name__ == '__main__':
     fe = zip(*mean_perpe)
     print fe
 
-    outname = 'leesard'
+    outname = 'test'
 
     import matplotlib as mpl
     # headless mode

@@ -228,7 +228,8 @@ def main():
             outfile = f_outdir + '/systematic_effect.pdf'
         else:
             outfile = f_outdir + '/systematic_effect.png'
-        title = r'% effect on event counts for {0} parameter'.format(f.name)
+        title = r'% effect on ' + r'${0}$'.format(l_in_map.tex) + \
+                ' event counts for {0} parameter'.format(f.name)
         sub_titles = (
             r'(-\sigma - {\rm baseline}) \:/\: {\rm baseline}',
             r'(+\sigma - {\rm baseline}) \:/\: {\rm baseline}'

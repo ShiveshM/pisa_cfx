@@ -29,25 +29,6 @@ class FullPaths(argparse.Action):
     def __call__(self, parser, namespace, values, option_string=None):
         setattr(namespace, self.dest, os.path.abspath(os.path.expanduser(values)))
 
-def is_dir(dirname):
-    """
-    Checks if a path is an actual directory, if not found then it creates the
-    directory
-    """
-    if not os.path.isdir(dirname):
-        fileio.mkdir(dirname)
-    return dirname
-
-def is_valid_file(filepath):
-    """
-    Checks if a path is an actual file
-    """
-    if not os.path.exists(filepath):
-        msg = 'The file {0} does not exist!'.format(filepath)
-        raise argparse.ArgumentError(msg)
-    else:
-        return filepath
-
 def parse_args():
     """Get command line arguments"""
     parser = ArgumentParser(
@@ -57,12 +38,13 @@ def parse_args():
     )
 
     parser.add_argument(
-        '-i', '--infile', type=is_valid_file, action=FullPaths, metavar='FILE',
+        '-i', '--infile', type=fileio.is_valid_file, action=FullPaths,
+        metavar='FILE',
         help='location/filename of the json file containing the MapSet'
     )
 
     parser.add_argument(
-        '-o', '--outdir', type=is_dir, action=FullPaths, metavar='DIR',
+        '-o', '--outdir', type=fileio.is_dir, action=FullPaths, metavar='DIR',
         default='$PISA/pisa/images/cfx/',
         help='location onto which to store the plot'
     )

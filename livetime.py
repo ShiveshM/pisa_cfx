@@ -1,14 +1,10 @@
-from copy import deepcopy
-
 import numpy as np
-import pint
 from uncertainties import ufloat
 from uncertainties import unumpy as unp
 
 from pisa import ureg, Q_
 from pisa.core.param import Param
 from pisa.core.pipeline import Pipeline
-from pisa.core.map import Map, MapSet
 from pisa.utils.log import set_verbosity
 
 
@@ -16,7 +12,7 @@ if __name__ == '__main__':
     outname = 'test'
 
     if 'test' in outname:
-        set_verbosity(0)
+        set_verbosity(2)
     else:
         set_verbosity(1)
 

@@ -8,20 +8,19 @@ then compare the produced Map to the nominal Map.
 """
 import os
 import argparse
-from collections import OrderedDict
 
 import numpy as np
-import pint
 
 from pisa import ureg, Q_
 from pisa.core.map import MapSet
 from pisa.core.param import Param, ParamSet
-from pisa.core.pipeline import Pipeline
 from pisa.core.distribution_maker import DistributionMaker
 from pisa.utils import fileio
 from pisa.utils.log import logging, set_verbosity
 
 from pisa.scripts.compare import compare
+
+from plot_systematic import make_plot
 
 
 __all__ = ['SIGMA', 'FullPaths', 'parse_args', 'main']
@@ -122,6 +121,11 @@ def main():
     args = vars(parse_args())
     set_verbosity(args.pop('v'))
 
+    make_pdf = False
+    if args['pdf']:
+        make_pdf = True
+        args['pdf']= False
+
     outdir = args.pop('outdir')
     SIGMA *= args.pop('sigma')
 
@@ -213,6 +217,29 @@ def main():
             test=MapSet([u_out]),
             test_label=r'+sigma',
             **args
+        )
+
+        l_in_mapset = l_outdir+'/'+'fract_diff__-sigma___baseline.json.bz2'
+        u_in_mapset = u_outdir+'/'+'fract_diff__+sigma___baseline.json.bz2'
+        l_in_map = MapSet.from_json(l_in_mapset).pop()
+        u_in_map = MapSet.from_json(u_in_mapset).pop()
+
+        if make_pdf:
+            outfile = f_outdir + '/systematic_effect.pdf'
+        else:
+            outfile = f_outdir + '/systematic_effect.png'
+        title = r'% effect on event counts for {0} parameter'.format(f.name)
+        sub_titles = (
+            r'(-\sigma - {\rm baseline}) \:/\: {\rm baseline}',
+            r'(+\sigma - {\rm baseline}) \:/\: {\rm baseline}'
+        )
+        make_plot(
+            maps=(l_in_map, u_in_map),
+            outfile=outfile,
+            logv=False,
+            vlabel=r'({\rm change} - {\rm baseline}) \:/\: {\rm baseline}',
+            title=title,
+            sub_titles=sub_titles
         )
 
 

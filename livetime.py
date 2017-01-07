@@ -12,7 +12,7 @@ if __name__ == '__main__':
     outname = 'test'
 
     if 'test' in outname:
-        set_verbosity(2)
+        set_verbosity(1)
     else:
         set_verbosity(1)
 
@@ -77,11 +77,11 @@ if __name__ == '__main__':
             mean_perpe[idx].append(np.mean(f))
             # t = ufloat(np.mean(unp.nominal_values(f)),
             #            np.std(unp.nominal_values(f)))
-            mean_perpe[idx].append(t)
+            # mean_perpe[idx].append(t)
         mean_perbin.append(np.mean(fe, axis=0).flatten())
         # a = unp.uarray(np.mean(unp.nominal_values(fe), axis=0).flatten(),
         #                np.std(unp.nominal_values(fe), axis=0).flatten())
-        mean_perbin.append(a)
+        # mean_perbin.append(a)
 
     fe = zip(*mean_perpe)
     print fe

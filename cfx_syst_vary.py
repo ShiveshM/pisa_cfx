@@ -153,9 +153,15 @@ def main():
                 params.extend(param)
 
     free = params.free
+    contin = True
     for f in free:
-        # if 'ratio' not in f.name:
+        # if 'norm_noise' not in f.name:
         #     continue
+        # if 'atm_muon_scale' in f.name:
+        #     contin = False
+        # if contin:
+        #     continue
+
         logging.info('Working on parameter {0}'.format(f.name))
         if f.prior.kind != 'uniform':
             # Use deltaLLH = SIGMA to define +/- sigma for non-uniform

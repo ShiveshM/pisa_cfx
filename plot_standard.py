@@ -115,8 +115,9 @@ def plot_CFX_one(map, outfile, logy=False, ylim=None, ylabel=None):
     ax.tick_params(axis='x', labelsize=14)
     ax.tick_params(axis='y', labelsize=12)
 
-    # TODO(shivesh): add units
-    ax.set_xlabel(energy_binning.tex, fontsize=18)
+    ax.set_xlabel(r'${0}({1:~})$'.format(
+        energy_binning.tex, energy_binning.units), fontsize=18
+    )
     if ylabel is not None:
         ylabel = r'{0}'.format(ylabel)
         ax.set_ylabel(ylabel, fontsize=18)
@@ -140,7 +141,7 @@ def plot_CFX_one(map, outfile, logy=False, ylim=None, ylabel=None):
             color=colour, xerr=0, yerr=unp.std_devs(hist), capsize=1.3,
             alpha=1, linestyle='None', markersize=2, linewidth=2
         )
-    legend = ax.legend(title=coszen_binning.tex, prop=dict(size=12))
+    legend = ax.legend(title=r'${0}$'.format(coszen_binning.tex), prop=dict(size=12))
     plt.setp(legend.get_title(), fontsize=18)
     at = AnchoredText(r'$%s$' % map.tex, prop=dict(size=20), frameon=True,
                       loc=2)

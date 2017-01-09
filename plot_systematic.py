@@ -71,8 +71,18 @@ def parse_args():
 def format_2D_axis(ax, binning, title):
     x_bins, y_bins = binning.dims
 
-    ax.set_xlabel(r'${0}$'.format(x_bins.tex), fontsize=18)
-    ax.set_ylabel(r'${0}$'.format(y_bins.tex), fontsize=18)
+    if r'{0:~}'.format(x_bins.units) == '':
+        ax.set_xlabel(r'${0}$'.format(x_bins.tex), fontsize=18)
+    else:
+        ax.set_xlabel(r'${0}({1:~})$'.format(
+            x_bins.tex, x_bins.units), fontsize=18
+        )
+    if r'{0:~}'.format(y_bins.units) == '':
+        ax.set_ylabel(r'${0}$'.format(y_bins.tex), fontsize=18)
+    else:
+        ax.set_ylabel(r'${0}({1:~})$'.format(
+            y_bins.tex, y_bins.units), fontsize=18
+        )
     ax.set_title(r'${0}$'.format(title), fontsize=18)
 
     plt.xticks(x_bins.bin_edges.m, ['%.2f' % x for x in x_bins.bin_edges.m])

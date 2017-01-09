@@ -9,7 +9,7 @@ from pisa.utils.log import set_verbosity
 
 
 if __name__ == '__main__':
-    outname = 'greco'
+    outname = 'test'
 
     if 'test' in outname:
         set_verbosity(1)

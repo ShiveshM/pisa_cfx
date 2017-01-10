@@ -1,0 +1,133 @@
+PISA running in double precision (FP64) mode.
+
+[ WARNING] Directory "." already exists
+[   DEBUG] Found /users/mandalia/programs/pisa/pisa/resources/settings/pipeline/example_cfx.cfg at /users/mandalia/programs/pisa/pisa/resources/settings/pipeline/example_cfx.cfg
+[   DEBUG] Could not find path "settings/osc/nufitv20.cfg"
+[   DEBUG] Found resource "settings/osc/nufitv20.cfg" in PISA package at "/common/users/mandalia/programs/pisa/pisa/resources/settings/osc/nufitv20.cfg"
+[   DEBUG] Could not find path "settings/osc/earth.cfg"
+[   DEBUG] Found resource "settings/osc/earth.cfg" in PISA package at "/common/users/mandalia/programs/pisa/pisa/resources/settings/osc/earth.cfg"
+[   DEBUG] Could not find path "priors/nufitv20shiftedtheta23splines.json"
+[   DEBUG] Found resource "priors/nufitv20shiftedtheta23splines.json" in PISA package at "/common/users/mandalia/programs/pisa/pisa/resources/priors/nufitv20shiftedtheta23splines.json"
+[   DEBUG] Found /common/users/mandalia/programs/pisa/pisa/resources/priors/nufitv20shiftedtheta23splines.json at /common/users/mandalia/programs/pisa/pisa/resources/priors/nufitv20shiftedtheta23splines.json
+[   DEBUG] Opening resource "/common/users/mandalia/programs/pisa/pisa/resources/priors/nufitv20shiftedtheta23splines.json" from filesystem at "/common/users/mandalia/programs/pisa/pisa/resources/priors/nufitv20shiftedtheta23splines.json"
+[   DEBUG] Could not find path "priors/nufitv20shiftedtheta23splines.json"
+[   DEBUG] Found resource "priors/nufitv20shiftedtheta23splines.json" in PISA package at "/common/users/mandalia/programs/pisa/pisa/resources/priors/nufitv20shiftedtheta23splines.json"
+[   DEBUG] Found /common/users/mandalia/programs/pisa/pisa/resources/priors/nufitv20shiftedtheta23splines.json at /common/users/mandalia/programs/pisa/pisa/resources/priors/nufitv20shiftedtheta23splines.json
+[   DEBUG] Opening resource "/common/users/mandalia/programs/pisa/pisa/resources/priors/nufitv20shiftedtheta23splines.json" from filesystem at "/common/users/mandalia/programs/pisa/pisa/resources/priors/nufitv20shiftedtheta23splines.json"
+[   DEBUG] instantiating stage data / service sample
+[ PROFILE] module pisa.core.stage, function _check_params: 0.0069 ms
+[   DEBUG] Entering sample._compute_outputs
+[   DEBUG] Could not find path "settings/mc/greco.cfg"
+[   DEBUG] Found resource "settings/mc/greco.cfg" in PISA package at "/common/users/mandalia/programs/pisa/pisa/resources/settings/mc/greco.cfg"
+[    INFO] Extracting dataset "nominal" from generator level sample "GRECO"
+[   DEBUG] Found path "GRECO/new_style_files/Level7_genie_12585-550.pckl" at /data/mandalia/data/pisa/GRECO/new_style_files/Level7_genie_12585-550.pckl
+[   DEBUG] Found path "GRECO/new_style_files/Level7_genie_14585-550.pckl" at /data/mandalia/data/pisa/GRECO/new_style_files/Level7_genie_14585-550.pckl
+[   DEBUG] Found path "GRECO/new_style_files/Level7_genie_16585-550.pckl" at /data/mandalia/data/pisa/GRECO/new_style_files/Level7_genie_16585-550.pckl
+[   DEBUG] Found path "GRECO/new_style_files/Level7_muongun.12370_15.pckl" at /data/mandalia/data/pisa/GRECO/new_style_files/Level7_muongun.12370_15.pckl
+[   DEBUG] Found path "GRECO/new_style_files/Level7_VuvuzelaPureNoise_V2.990015.pckl" at /data/mandalia/data/pisa/GRECO/new_style_files/Level7_VuvuzelaPureNoise_V2.990015.pckl
+[ PROFILE] module pisa.stages.data.sample, function _compute_outputs: 57044.0140 ms
+[   DEBUG] instantiating stage mc / service weight
+[ PROFILE] module pisa.core.stage, function _check_params: 0.0279 ms
+[   DEBUG] Opening resource "backgrounds/muongun_primary_cr_uncertainties_coszenith.txt" from PISA package.
+[   DEBUG] >> Working on stage "data" service "sample"
+[ PROFILE] module pisa.core.stage, function get_nominal_outputs: 20.0741 ms
+[   DEBUG] Entering sample._compute_outputs
+[   DEBUG] Could not find path "settings/mc/greco.cfg"
+[   DEBUG] Found resource "settings/mc/greco.cfg" in PISA package at "/common/users/mandalia/programs/pisa/pisa/resources/settings/mc/greco.cfg"
+[ PROFILE] module pisa.stages.data.sample, function _compute_outputs: 5.0809 ms
+[ PROFILE] module pisa.core.stage, function check_outputs: 0.0501 ms
+[ PROFILE] module pisa.core.stage, function get_outputs: 27.2410 ms
+[   DEBUG] >> Working on stage "mc" service "weight"
+[ PROFILE] module pisa.core.stage, function get_nominal_outputs: 36.1040 ms
+[   DEBUG] Entering weight._compute_outputs
+[   DEBUG] Reweighting xsec systematics
+[   DEBUG] Computing flux values
+[   DEBUG] Loading atmospheric flux table flux/honda-2015-spl-solmax-aa.d
+[   DEBUG] Opening resource "flux/honda-2015-spl-solmax-aa.d" from PISA package.
+[   DEBUG] Make spline representation of flux
+[   DEBUG] Doing this integral-preserving.
+[   DEBUG] Computing flux values for flavour numubar_nc
+[   DEBUG] Computing flux values for flavour nuebar_nc
+[   DEBUG] Computing flux values for flavour nue_nc
+[   DEBUG] Computing flux values for flavour nutau_nc
+[   DEBUG] Computing flux values for flavour nutau_cc
+[   DEBUG] Computing flux values for flavour numubar_cc
+[   DEBUG] Computing flux values for flavour nuebar_cc
+[   DEBUG] Computing flux values for flavour nue_cc
+[   DEBUG] Computing flux values for flavour nutaubar_cc
+[   DEBUG] Computing flux values for flavour numu_cc
+[   DEBUG] Computing flux values for flavour numu_nc
+[   DEBUG] Computing flux values for flavour nutaubar_nc
+[    INFO] Caching flux values to disk.
+[   DEBUG] Computing oscillation weights
+[   DEBUG] Using prob3gpu to calculate probabilities for events
+[ PROFILE] module pisa.core.stage, function _check_params: 0.0112 ms
+[   DEBUG] Could not find path "../stages/osc/prob3cuda"
+[   DEBUG] Found resource "../stages/osc/prob3cuda" in PISA package at "/common/users/mandalia/programs/pisa/pisa/resources/../stages/osc/prob3cuda"
+[   DEBUG] Could not find path "../utils"
+[   DEBUG] Found resource "../utils" in PISA package at "/common/users/mandalia/programs/pisa/pisa/resources/../utils"
+[   DEBUG]   pycuda INC PATH: ['/common/users/mandalia/programs/pisa/pisa/stages/osc/prob3cuda', '/common/users/mandalia/programs/pisa/pisa/utils']
+[   DEBUG]   pycuda FLAGS: []
+[   DEBUG] Could not find path "osc/PREM_12layer.dat"
+[   DEBUG] Found resource "osc/PREM_12layer.dat" in PISA package at "/common/users/mandalia/programs/pisa/pisa/resources/osc/PREM_12layer.dat"
+[   DEBUG] Could not find path "osc/PREM_12layer.dat"
+[   DEBUG] Found resource "osc/PREM_12layer.dat" in PISA package at "/common/users/mandalia/programs/pisa/pisa/resources/osc/PREM_12layer.dat"
+[   DEBUG] Could not find path "osc/PREM_12layer.dat"
+[   DEBUG] Found resource "osc/PREM_12layer.dat" in PISA package at "/common/users/mandalia/programs/pisa/pisa/resources/osc/PREM_12layer.dat"
+[   DEBUG] Could not find path "osc/PREM_12layer.dat"
+[   DEBUG] Found resource "osc/PREM_12layer.dat" in PISA package at "/common/users/mandalia/programs/pisa/pisa/resources/osc/PREM_12layer.dat"
+[   DEBUG] Could not find path "osc/PREM_12layer.dat"
+[   DEBUG] Found resource "osc/PREM_12layer.dat" in PISA package at "/common/users/mandalia/programs/pisa/pisa/resources/osc/PREM_12layer.dat"
+[   DEBUG] Could not find path "osc/PREM_12layer.dat"
+[   DEBUG] Found resource "osc/PREM_12layer.dat" in PISA package at "/common/users/mandalia/programs/pisa/pisa/resources/osc/PREM_12layer.dat"
+[   DEBUG] Could not find path "osc/PREM_12layer.dat"
+[   DEBUG] Found resource "osc/PREM_12layer.dat" in PISA package at "/common/users/mandalia/programs/pisa/pisa/resources/osc/PREM_12layer.dat"
+[   DEBUG] Could not find path "osc/PREM_12layer.dat"
+[   DEBUG] Found resource "osc/PREM_12layer.dat" in PISA package at "/common/users/mandalia/programs/pisa/pisa/resources/osc/PREM_12layer.dat"
+[   DEBUG] Could not find path "osc/PREM_12layer.dat"
+[   DEBUG] Found resource "osc/PREM_12layer.dat" in PISA package at "/common/users/mandalia/programs/pisa/pisa/resources/osc/PREM_12layer.dat"
+[   DEBUG] Could not find path "osc/PREM_12layer.dat"
+[   DEBUG] Found resource "osc/PREM_12layer.dat" in PISA package at "/common/users/mandalia/programs/pisa/pisa/resources/osc/PREM_12layer.dat"
+[   DEBUG] Could not find path "osc/PREM_12layer.dat"
+[   DEBUG] Found resource "osc/PREM_12layer.dat" in PISA package at "/common/users/mandalia/programs/pisa/pisa/resources/osc/PREM_12layer.dat"
+[   DEBUG] Could not find path "osc/PREM_12layer.dat"
+[   DEBUG] Found resource "osc/PREM_12layer.dat" in PISA package at "/common/users/mandalia/programs/pisa/pisa/resources/osc/PREM_12layer.dat"
+[   DEBUG] dm_mat: 
+ [[  0.00000000e+00  -7.50000000e-05  -2.45700000e-03]
+ [  7.50000000e-05   0.00000000e+00  -2.38200000e-03]
+ [  2.45700000e-03   2.38200000e-03   0.00000000e+00]]
+[   DEBUG] mix[re]: 
+ [[ 0.8249168   0.54558652  0.08688019]
+ [-0.45678422  0.58465481  0.66562005]
+ [ 0.31766728 -0.5967936   0.73150689]]
+[   DEBUG] Rate for numubar_nc =    82832.8651 mHz
+[   DEBUG] Rate for nuebar_nc =     34218.1711 mHz
+[   DEBUG] Rate for nue_nc =        124739.7501 mHz
+[   DEBUG] Rate for nutau_nc =      0.0121 mHz
+[   DEBUG] Rate for nutau_cc =      0.0331 mHz
+[   DEBUG] Rate for numubar_cc =    165663.1921 mHz
+[   DEBUG] Rate for nuebar_cc =     72676.5531 mHz
+[   DEBUG] Rate for nue_cc =        309449.0201 mHz
+[   DEBUG] Rate for nutaubar_cc =   0.0131 mHz
+[   DEBUG] Rate for numu_cc =       911200.2581 mHz
+[   DEBUG] Rate for numu_nc =       395094.6941 mHz
+[   DEBUG] Rate for nutaubar_nc =   0.0031 mHz
+[ PROFILE] module pisa.stages.mc.weight, function _compute_outputs: 4957103.2169 ms
+[ PROFILE] module pisa.core.stage, function check_outputs: 0.0520 ms
+[ PROFILE] module pisa.core.stage, function get_outputs: 4957142.1402 ms
+[ PROFILE] module __main__, function get_outputs: 4957169.7621 ms
+[ WARNING] /data/mandalia/programs/anaconda2/envs/pisa/lib/python2.7/site-packages/matplotlib/image.py:375: UserWarning: Images are not supported on non-linear axes.
+  warnings.warn("Images are not supported on non-linear axes.")
+
+[ WARNING] /data/mandalia/programs/anaconda2/envs/pisa/lib/python2.7/site-packages/matplotlib/font_manager.py:1288: UserWarning: findfont: Font family [u'cursive'] not found. Falling back to Bitstream Vera Sans
+  (prop.get_family(), self.defaultFamily[fontext]))
+
+[ WARNING] /data/mandalia/programs/anaconda2/envs/pisa/lib/python2.7/site-packages/matplotlib/mathtext.py:857: MathTextWarning: Substituting with a symbol from Computer Modern.
+  MathTextWarning)
+
+Traceback (most recent call last):
+  File "/users/mandalia/programs/pisa/pisa/core/pipeline.py", line 584, in <module>
+    pipeline, outputs = main(return_outputs=True)
+  File "/users/mandalia/programs/pisa/pisa/core/pipeline.py", line 548, in main
+    stage.outputs.to_json(fbase + '__output.json.bz2')
+AttributeError: 'Data' object has no attribute 'to_json'

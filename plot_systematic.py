@@ -50,6 +50,10 @@ def parse_args():
         help='flag to specifiy whether to use a log scale on the y axis'
     )
     parser.add_argument(
+        '--center-zero', action='store_true',
+        help='center the z axis on 0'
+    )
+    parser.add_argument(
         '--vlabel', type=str, default=None, metavar='STR',
         help='set the label of the z axis'
     )
@@ -141,8 +145,8 @@ def plot_2D(ax, map, colour, logv, vlimits):
     return cax
 
 
-def make_plot(maps, outfile, logv=False, vlabel=None, title=None,
-              sub_titles=None):
+def make_plot(maps, outfile, logv=False, center_zero=False, vlabel=None,
+              title=None, sub_titles=None):
     fig = plt.figure(figsize=(24, 8))
     if title is not None:
         fig.suptitle(title, fontsize=14)
@@ -154,7 +158,11 @@ def make_plot(maps, outfile, logv=False, vlabel=None, title=None,
 
     vmin = np.min([np.min(maps[0].hist), np.min(maps[1].hist)])
     vmax = np.max([np.max(maps[0].hist), np.max(maps[1].hist)])
-    vlimits = map(unp.nominal_values, (vmin, vmax))
+    if center_zero:
+        max_diff = unp.nominal_values(np.max([vmin, vmax]))
+        vlimits = [-max_diff, max_diff]
+    else:
+        vlimits = map(unp.nominal_values, (vmin, vmax))
 
     ax0 = fig.add_subplot(gs[0])
     cax = plot_2D(ax0, maps[0], 'RdYlBu', logv, vlimits)
@@ -190,6 +198,7 @@ def main():
         maps = (o_map, t_map),
         outfile = outfile,
         logv = args.logv,
+        center_zero = args.center_zero,
         vlabel = args.vlabel,
         title = args.title,
         sub_titles = args.subtitles,

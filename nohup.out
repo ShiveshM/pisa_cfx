@@ -1,0 +1,420 @@
+PISA running in double precision (FP64) mode.
+
+[ WARNING] Directory "./images/syst_pulls/greco/" already exists
+[    INFO] including file /common/users/mandalia/programs/pisa/pisa/resources/settings/osc/nufitv20.cfg in cfg
+[    INFO] including file /common/users/mandalia/programs/pisa/pisa/resources/settings/osc/earth.cfg in cfg
+[    INFO] Extracting neutrino dataset "nominal" from sample "GRECO"
+[    INFO] Extracting muon dataset "nominal" from sample "GRECO"
+[    INFO] Extracting noise dataset "nominal" from sample "GRECO"
+[    INFO] Loading flux values from cache.
+[    INFO] Loading fit coefficients from cache.
+[    INFO] including file /common/users/mandalia/programs/pisa/pisa/resources/settings/osc/nufitv20.cfg in cfg
+[    INFO] including file /common/users/mandalia/programs/pisa/pisa/resources/settings/osc/earth.cfg in cfg
+[    INFO] Extracting neutrino dataset "neutrinos:gen_lvl" from generator level sample "Low Energy GENIE Simulation"
+[    INFO] Loading flux values from cache.
+[    INFO] Returning baseline MapSet
+[    INFO] Free params = nu_diff_DIS=+0.0000e+00 nubar_diff_DIS=+0.0000e+00 hadron_DIS=+0.0000e+00 atm_delta_index=+0.0000e+00 nu_nubar_ratio=+1.0000e+00 nue_numu_ratio=+1.0000e+00 norm_numu=+1.0000e+00 theta13=+8.5000e+00 deg theta23=+4.2300e+01 deg deltacp=+3.0600e+02 deg deltam31=+2.4570e-03 eV2 nu_dom_eff=+1.0000e+00 nu_hole_ice=+2.0000e-02 mu_dom_eff=+1.0000e+00 mu_hole_ice=+2.0000e-02
+[    INFO] Working on parameter nu_dom_eff
+[    INFO] Setting nu_dom_eff lower sigma bound to 0.97027027027 dimensionless
+[    INFO] including file /common/users/mandalia/programs/pisa/pisa/resources/settings/osc/nufitv20.cfg in cfg
+[    INFO] including file /common/users/mandalia/programs/pisa/pisa/resources/settings/osc/earth.cfg in cfg
+[    INFO] Extracting neutrino dataset "neutrinos:gen_lvl" from generator level sample "Low Energy GENIE Simulation"
+[ WARNING] Converted `name` "reco_coszen reco_energy" to valid Python: "reco_coszenreco_energy"
+[ WARNING] Converted `name` "coszen energy" to valid Python: "coszenenergy"
+[    INFO] Unfolded reco sum 1979930.63814
+[    INFO] Setting nu_dom_eff upper sigma bound to 1.03018018018 dimensionless
+[    INFO] including file /common/users/mandalia/programs/pisa/pisa/resources/settings/osc/nufitv20.cfg in cfg
+[    INFO] including file /common/users/mandalia/programs/pisa/pisa/resources/settings/osc/earth.cfg in cfg
+[    INFO] Extracting neutrino dataset "neutrinos:gen_lvl" from generator level sample "Low Energy GENIE Simulation"
+[ WARNING] Converted `name` "reco_coszen reco_energy" to valid Python: "reco_coszenreco_energy"
+[ WARNING] Converted `name` "coszen energy" to valid Python: "coszenenergy"
+[ WARNING] TROOT::Append:0: RuntimeWarning: Replacing existing TH1: smearing_matrix (Potential memory leak).
+
+[    INFO] Unfolded reco sum 2065187.44097
+[ WARNING] Directory "./images/syst_pulls/greco//nu_dom_eff" already exists
+[ WARNING] Directory "./images/syst_pulls/greco//nu_dom_eff/lower" already exists
+[ WARNING] Directory "./images/syst_pulls/greco//nu_dom_eff/upper" already exists
+[ WARNING] Directory "./images/syst_pulls/greco//nu_dom_eff/lower" already exists
+[    INFO] Reference map(s) derived from a MapSet stored on disk
+[    INFO] Test map(s) derived from a MapSet stored on disk
+[ WARNING] Overwriting file at './images/syst_pulls/greco//nu_dom_eff/lower/maps__baseline.json.bz2'
+[ WARNING] Overwriting file at './images/syst_pulls/greco//nu_dom_eff/lower/maps__-sigma.json.bz2'
+[    INFO] Map numu_cc+numubar_cc...
+[    INFO]   Ref map(s):
+[    INFO]     min   :     5103.56
+[    INFO]     max   :   158801.63
+[    INFO]     total :  2040983.85
+[    INFO]     mean  :    51024.60
+[    INFO]   Test map(s):
+[    INFO]     min   :     5173.94
+[    INFO]     max   :   150149.49
+[    INFO]     total :  1979930.64
+[    INFO]     mean  :    49498.27
+[    INFO]   Absolute fract. diff., abs((Test - Ref) / Ref):
+[    INFO]     max   : 1.2924e-01
+[    INFO]     mean  : 3.7679e-02
+[    INFO]     median: 2.4169e-02
+[    INFO]   Fractional difference, (Test - Ref) / Ref:
+[    INFO]     min   : -1.2924e-01
+[    INFO]     max   : 5.8040e-02
+[    INFO]     mean  : -2.2619e-02 +/- 4.7450e-02
+[    INFO]     median: -1.0894e-02 +/- 2.4169e-02
+[    INFO]   Difference, Test - Ref:
+[    INFO]     min   : -1.4741e+04
+[    INFO]     max   : 2.4985e+03
+[    INFO]     mean  : -1.5263e+03 +/- 3.4882e+03
+[    INFO]     median: -6.6341e+02 +/- 8.8161e+02
+[    INFO]   Asymmetry, (Test - Ref) / sqrt(Ref)
+[    INFO]     min   : -1.2924e-01
+[    INFO]     max   : 5.8040e-02
+[    INFO]     total : 7.6731e+01 (sum in quadrature)
+[    INFO] 
+[ WARNING] Overwriting file at './images/syst_pulls/greco//nu_dom_eff/lower/diff__-sigma__baseline.json.bz2'
+[ WARNING] Overwriting file at './images/syst_pulls/greco//nu_dom_eff/lower/fract_diff__-sigma___baseline.json.bz2'
+[ WARNING] Overwriting file at './images/syst_pulls/greco//nu_dom_eff/lower/asymm__-sigma___baseline.json.bz2'
+[ WARNING] Overwriting file at './images/syst_pulls/greco//nu_dom_eff/lower/stats__-sigma__baseline.json.bz2'
+[ WARNING] Directory "./images/syst_pulls/greco//nu_dom_eff/upper" already exists
+[    INFO] Reference map(s) derived from a MapSet stored on disk
+[    INFO] Test map(s) derived from a MapSet stored on disk
+[ WARNING] Overwriting file at './images/syst_pulls/greco//nu_dom_eff/upper/maps__baseline.json.bz2'
+[ WARNING] Overwriting file at './images/syst_pulls/greco//nu_dom_eff/upper/maps__+sigma.json.bz2'
+[    INFO] Map numu_cc+numubar_cc...
+[    INFO]   Ref map(s):
+[    INFO]     min   :     5103.56
+[    INFO]     max   :   158801.63
+[    INFO]     total :  2040983.85
+[    INFO]     mean  :    51024.60
+[    INFO]   Test map(s):
+[    INFO]     min   :     4721.41
+[    INFO]     max   :   162838.78
+[    INFO]     total :  2065187.44
+[    INFO]     mean  :    51629.69
+[    INFO]   Absolute fract. diff., abs((Test - Ref) / Ref):
+[    INFO]     max   : 4.1744e-01
+[    INFO]     mean  : 3.8210e-02
+[    INFO]     median: 2.1225e-02
+[    INFO]   Fractional difference, (Test - Ref) / Ref:
+[    INFO]     min   : -1.6438e-01
+[    INFO]     max   : 4.1744e-01
+[    INFO]     mean  : 8.0880e-03 +/- 7.6751e-02
+[    INFO]     median: 4.8262e-03 +/- 2.1225e-02
+[    INFO]   Difference, Test - Ref:
+[    INFO]     min   : -7.2404e+03
+[    INFO]     max   : 2.8065e+04
+[    INFO]     mean  : 6.0509e+02 +/- 4.7082e+03
+[    INFO]     median: 1.2656e+02 +/- 6.5298e+02
+[    INFO]   Asymmetry, (Test - Ref) / sqrt(Ref)
+[    INFO]     min   : -1.6438e-01
+[    INFO]     max   : 4.1744e-01
+[    INFO]     total : 1.1464e+02 (sum in quadrature)
+[    INFO] 
+[ WARNING] Overwriting file at './images/syst_pulls/greco//nu_dom_eff/upper/diff__+sigma__baseline.json.bz2'
+[ WARNING] Overwriting file at './images/syst_pulls/greco//nu_dom_eff/upper/fract_diff__+sigma___baseline.json.bz2'
+[ WARNING] Overwriting file at './images/syst_pulls/greco//nu_dom_eff/upper/asymm__+sigma___baseline.json.bz2'
+[ WARNING] Overwriting file at './images/syst_pulls/greco//nu_dom_eff/upper/stats__+sigma__baseline.json.bz2'
+[ WARNING] /data/mandalia/programs/anaconda2/envs/pisa/lib/python2.7/site-packages/matplotlib/font_manager.py:1288: UserWarning: findfont: Font family [u'cursive'] not found. Falling back to Bitstream Vera Sans
+  (prop.get_family(), self.defaultFamily[fontext]))
+
+[ WARNING] /data/mandalia/programs/anaconda2/envs/pisa/lib/python2.7/site-packages/matplotlib/mathtext.py:857: MathTextWarning: Substituting with a symbol from Computer Modern.
+  MathTextWarning)
+
+[    INFO] Working on parameter nu_hole_ice
+[    INFO] Setting nu_hole_ice lower sigma bound to 0.0149911911912 dimensionless
+[    INFO] including file /common/users/mandalia/programs/pisa/pisa/resources/settings/osc/nufitv20.cfg in cfg
+[    INFO] including file /common/users/mandalia/programs/pisa/pisa/resources/settings/osc/earth.cfg in cfg
+[    INFO] Extracting neutrino dataset "neutrinos:gen_lvl" from generator level sample "Low Energy GENIE Simulation"
+[ WARNING] Converted `name` "reco_coszen reco_energy" to valid Python: "reco_coszenreco_energy"
+[ WARNING] Converted `name` "coszen energy" to valid Python: "coszenenergy"
+[ WARNING] TROOT::Append:0: RuntimeWarning: Replacing existing TH1: smearing_matrix (Potential memory leak).
+
+[    INFO] Unfolded reco sum 1914320.14912
+[    INFO] Setting nu_hole_ice upper sigma bound to 0.0249968968969 dimensionless
+[    INFO] including file /common/users/mandalia/programs/pisa/pisa/resources/settings/osc/nufitv20.cfg in cfg
+[    INFO] including file /common/users/mandalia/programs/pisa/pisa/resources/settings/osc/earth.cfg in cfg
+[    INFO] Extracting neutrino dataset "neutrinos:gen_lvl" from generator level sample "Low Energy GENIE Simulation"
+[ WARNING] Converted `name` "reco_coszen reco_energy" to valid Python: "reco_coszenreco_energy"
+[ WARNING] Converted `name` "coszen energy" to valid Python: "coszenenergy"
+[ WARNING] TROOT::Append:0: RuntimeWarning: Replacing existing TH1: smearing_matrix (Potential memory leak).
+
+[    INFO] Unfolded reco sum 2017045.78525
+[ WARNING] Directory "./images/syst_pulls/greco//nu_hole_ice" already exists
+[ WARNING] Directory "./images/syst_pulls/greco//nu_hole_ice/lower" already exists
+[ WARNING] Directory "./images/syst_pulls/greco//nu_hole_ice/upper" already exists
+[ WARNING] Directory "./images/syst_pulls/greco//nu_hole_ice/lower" already exists
+[    INFO] Reference map(s) derived from a MapSet stored on disk
+[    INFO] Test map(s) derived from a MapSet stored on disk
+[ WARNING] Overwriting file at './images/syst_pulls/greco//nu_hole_ice/lower/maps__baseline.json.bz2'
+[ WARNING] Overwriting file at './images/syst_pulls/greco//nu_hole_ice/lower/maps__-sigma.json.bz2'
+[    INFO] Map numu_cc+numubar_cc...
+[    INFO]   Ref map(s):
+[    INFO]     min   :     5103.56
+[    INFO]     max   :   158801.63
+[    INFO]     total :  2040983.85
+[    INFO]     mean  :    51024.60
+[    INFO]   Test map(s):
+[    INFO]     min   :     4304.64
+[    INFO]     max   :   145014.77
+[    INFO]     total :  1914320.15
+[    INFO]     mean  :    47858.00
+[    INFO]   Absolute fract. diff., abs((Test - Ref) / Ref):
+[    INFO]     max   : 3.1606e-01
+[    INFO]     mean  : 5.1885e-02
+[    INFO]     median: 3.0473e-02
+[    INFO]   Fractional difference, (Test - Ref) / Ref:
+[    INFO]     min   : -3.1606e-01
+[    INFO]     max   : 1.3158e-01
+[    INFO]     mean  : -3.7663e-02 +/- 7.0602e-02
+[    INFO]     median: -2.3221e-02 +/- 3.0473e-02
+[    INFO]   Difference, Test - Ref:
+[    INFO]     min   : -4.6937e+04
+[    INFO]     max   : 2.0624e+03
+[    INFO]     mean  : -3.1666e+03 +/- 7.8911e+03
+[    INFO]     median: -4.8309e+02 +/- 6.8407e+02
+[    INFO]   Asymmetry, (Test - Ref) / sqrt(Ref)
+[    INFO]     min   : -3.1606e-01
+[    INFO]     max   : 1.3158e-01
+[    INFO]     total : 1.4910e+02 (sum in quadrature)
+[    INFO] 
+[ WARNING] Overwriting file at './images/syst_pulls/greco//nu_hole_ice/lower/diff__-sigma__baseline.json.bz2'
+[ WARNING] Overwriting file at './images/syst_pulls/greco//nu_hole_ice/lower/fract_diff__-sigma___baseline.json.bz2'
+[ WARNING] Overwriting file at './images/syst_pulls/greco//nu_hole_ice/lower/asymm__-sigma___baseline.json.bz2'
+[ WARNING] Overwriting file at './images/syst_pulls/greco//nu_hole_ice/lower/stats__-sigma__baseline.json.bz2'
+[ WARNING] Directory "./images/syst_pulls/greco//nu_hole_ice/upper" already exists
+[    INFO] Reference map(s) derived from a MapSet stored on disk
+[    INFO] Test map(s) derived from a MapSet stored on disk
+[ WARNING] Overwriting file at './images/syst_pulls/greco//nu_hole_ice/upper/maps__baseline.json.bz2'
+[ WARNING] Overwriting file at './images/syst_pulls/greco//nu_hole_ice/upper/maps__+sigma.json.bz2'
+[    INFO] Map numu_cc+numubar_cc...
+[    INFO]   Ref map(s):
+[    INFO]     min   :     5103.56
+[    INFO]     max   :   158801.63
+[    INFO]     total :  2040983.85
+[    INFO]     mean  :    51024.60
+[    INFO]   Test map(s):
+[    INFO]     min   :     5201.14
+[    INFO]     max   :   154137.97
+[    INFO]     total :  2017045.79
+[    INFO]     mean  :    50426.14
+[    INFO]   Absolute fract. diff., abs((Test - Ref) / Ref):
+[    INFO]     max   : 1.6970e-01
+[    INFO]     mean  : 3.4446e-02
+[    INFO]     median: 2.1059e-02
+[    INFO]   Fractional difference, (Test - Ref) / Ref:
+[    INFO]     min   : -1.6970e-01
+[    INFO]     max   : 5.8876e-02
+[    INFO]     mean  : -7.6307e-03 +/- 4.9284e-02
+[    INFO]     median: 7.2290e-03 +/- 2.1059e-02
+[    INFO]   Difference, Test - Ref:
+[    INFO]     min   : -2.5202e+04
+[    INFO]     max   : 5.1853e+03
+[    INFO]     mean  : -5.9845e+02 +/- 4.5866e+03
+[    INFO]     median: 8.8685e+01 +/- 8.0554e+02
+[    INFO]   Asymmetry, (Test - Ref) / sqrt(Ref)
+[    INFO]     min   : -1.6970e-01
+[    INFO]     max   : 5.8876e-02
+[    INFO]     total : 8.5853e+01 (sum in quadrature)
+[    INFO] 
+[ WARNING] Overwriting file at './images/syst_pulls/greco//nu_hole_ice/upper/diff__+sigma__baseline.json.bz2'
+[ WARNING] Overwriting file at './images/syst_pulls/greco//nu_hole_ice/upper/fract_diff__+sigma___baseline.json.bz2'
+[ WARNING] Overwriting file at './images/syst_pulls/greco//nu_hole_ice/upper/asymm__+sigma___baseline.json.bz2'
+[ WARNING] Overwriting file at './images/syst_pulls/greco//nu_hole_ice/upper/stats__+sigma__baseline.json.bz2'
+[    INFO] Working on parameter mu_dom_eff
+[    INFO] Setting mu_dom_eff lower sigma bound to 0.97027027027 dimensionless
+[    INFO] including file /common/users/mandalia/programs/pisa/pisa/resources/settings/osc/nufitv20.cfg in cfg
+[    INFO] including file /common/users/mandalia/programs/pisa/pisa/resources/settings/osc/earth.cfg in cfg
+[    INFO] Extracting neutrino dataset "neutrinos:gen_lvl" from generator level sample "Low Energy GENIE Simulation"
+[ WARNING] Converted `name` "reco_coszen reco_energy" to valid Python: "reco_coszenreco_energy"
+[ WARNING] Converted `name` "coszen energy" to valid Python: "coszenenergy"
+[ WARNING] TROOT::Append:0: RuntimeWarning: Replacing existing TH1: smearing_matrix (Potential memory leak).
+
+[    INFO] Unfolded reco sum 1955997.2011
+[    INFO] Setting mu_dom_eff upper sigma bound to 1.03018018018 dimensionless
+[    INFO] including file /common/users/mandalia/programs/pisa/pisa/resources/settings/osc/nufitv20.cfg in cfg
+[    INFO] including file /common/users/mandalia/programs/pisa/pisa/resources/settings/osc/earth.cfg in cfg
+[    INFO] Extracting neutrino dataset "neutrinos:gen_lvl" from generator level sample "Low Energy GENIE Simulation"
+[ WARNING] Converted `name` "reco_coszen reco_energy" to valid Python: "reco_coszenreco_energy"
+[ WARNING] Converted `name` "coszen energy" to valid Python: "coszenenergy"
+[ WARNING] TROOT::Append:0: RuntimeWarning: Replacing existing TH1: smearing_matrix (Potential memory leak).
+
+[    INFO] Unfolded reco sum 2048902.66537
+[ WARNING] Directory "./images/syst_pulls/greco//mu_dom_eff" already exists
+[ WARNING] Directory "./images/syst_pulls/greco//mu_dom_eff/lower" already exists
+[ WARNING] Directory "./images/syst_pulls/greco//mu_dom_eff/upper" already exists
+[ WARNING] Directory "./images/syst_pulls/greco//mu_dom_eff/lower" already exists
+[    INFO] Reference map(s) derived from a MapSet stored on disk
+[    INFO] Test map(s) derived from a MapSet stored on disk
+[ WARNING] Overwriting file at './images/syst_pulls/greco//mu_dom_eff/lower/maps__baseline.json.bz2'
+[ WARNING] Overwriting file at './images/syst_pulls/greco//mu_dom_eff/lower/maps__-sigma.json.bz2'
+[    INFO] Map numu_cc+numubar_cc...
+[    INFO]   Ref map(s):
+[    INFO]     min   :     5103.56
+[    INFO]     max   :   158801.63
+[    INFO]     total :  2040983.85
+[    INFO]     mean  :    51024.60
+[    INFO]   Test map(s):
+[    INFO]     min   :     4875.18
+[    INFO]     max   :   145664.91
+[    INFO]     total :  1955997.20
+[    INFO]     mean  :    48899.93
+[    INFO]   Absolute fract. diff., abs((Test - Ref) / Ref):
+[    INFO]     max   : 1.5817e-01
+[    INFO]     mean  : 3.4606e-02
+[    INFO]     median: 2.2649e-02
+[    INFO]   Fractional difference, (Test - Ref) / Ref:
+[    INFO]     min   : -1.5817e-01
+[    INFO]     max   : 5.3632e-02
+[    INFO]     mean  : -2.4186e-02 +/- 4.0984e-02
+[    INFO]     median: -1.4337e-02 +/- 2.2649e-02
+[    INFO]   Difference, Test - Ref:
+[    INFO]     min   : -2.5118e+04
+[    INFO]     max   : 1.5277e+03
+[    INFO]     mean  : -2.1247e+03 +/- 4.6378e+03
+[    INFO]     median: -3.1775e+02 +/- 6.9940e+02
+[    INFO]   Asymmetry, (Test - Ref) / sqrt(Ref)
+[    INFO]     min   : -1.5817e-01
+[    INFO]     max   : 5.3632e-02
+[    INFO]     total : 9.1335e+01 (sum in quadrature)
+[    INFO] 
+[ WARNING] Overwriting file at './images/syst_pulls/greco//mu_dom_eff/lower/diff__-sigma__baseline.json.bz2'
+[ WARNING] Overwriting file at './images/syst_pulls/greco//mu_dom_eff/lower/fract_diff__-sigma___baseline.json.bz2'
+[ WARNING] Overwriting file at './images/syst_pulls/greco//mu_dom_eff/lower/asymm__-sigma___baseline.json.bz2'
+[ WARNING] Overwriting file at './images/syst_pulls/greco//mu_dom_eff/lower/stats__-sigma__baseline.json.bz2'
+[ WARNING] Directory "./images/syst_pulls/greco//mu_dom_eff/upper" already exists
+[    INFO] Reference map(s) derived from a MapSet stored on disk
+[    INFO] Test map(s) derived from a MapSet stored on disk
+[ WARNING] Overwriting file at './images/syst_pulls/greco//mu_dom_eff/upper/maps__baseline.json.bz2'
+[ WARNING] Overwriting file at './images/syst_pulls/greco//mu_dom_eff/upper/maps__+sigma.json.bz2'
+[    INFO] Map numu_cc+numubar_cc...
+[    INFO]   Ref map(s):
+[    INFO]     min   :     5103.56
+[    INFO]     max   :   158801.63
+[    INFO]     total :  2040983.85
+[    INFO]     mean  :    51024.60
+[    INFO]   Test map(s):
+[    INFO]     min   :     5339.49
+[    INFO]     max   :   168638.83
+[    INFO]     total :  2048902.67
+[    INFO]     mean  :    51222.57
+[    INFO]   Absolute fract. diff., abs((Test - Ref) / Ref):
+[    INFO]     max   : 1.7534e-01
+[    INFO]     mean  : 3.8881e-02
+[    INFO]     median: 2.5280e-02
+[    INFO]   Fractional difference, (Test - Ref) / Ref:
+[    INFO]     min   : -1.7534e-01
+[    INFO]     max   : 1.0023e-01
+[    INFO]     mean  : 7.5705e-03 +/- 5.4005e-02
+[    INFO]     median: 1.2326e-02 +/- 2.5280e-02
+[    INFO]   Difference, Test - Ref:
+[    INFO]     min   : -2.6038e+04
+[    INFO]     max   : 9.8372e+03
+[    INFO]     mean  : 1.9797e+02 +/- 5.0954e+03
+[    INFO]     median: 2.5765e+02 +/- 7.7642e+02
+[    INFO]   Asymmetry, (Test - Ref) / sqrt(Ref)
+[    INFO]     min   : -1.7534e-01
+[    INFO]     max   : 1.0023e-01
+[    INFO]     total : 9.3934e+01 (sum in quadrature)
+[    INFO] 
+[ WARNING] Overwriting file at './images/syst_pulls/greco//mu_dom_eff/upper/diff__+sigma__baseline.json.bz2'
+[ WARNING] Overwriting file at './images/syst_pulls/greco//mu_dom_eff/upper/fract_diff__+sigma___baseline.json.bz2'
+[ WARNING] Overwriting file at './images/syst_pulls/greco//mu_dom_eff/upper/asymm__+sigma___baseline.json.bz2'
+[ WARNING] Overwriting file at './images/syst_pulls/greco//mu_dom_eff/upper/stats__+sigma__baseline.json.bz2'
+[    INFO] Working on parameter mu_hole_ice
+[    INFO] Setting mu_hole_ice lower sigma bound to 0.0149911911912 dimensionless
+[    INFO] including file /common/users/mandalia/programs/pisa/pisa/resources/settings/osc/nufitv20.cfg in cfg
+[    INFO] including file /common/users/mandalia/programs/pisa/pisa/resources/settings/osc/earth.cfg in cfg
+[    INFO] Extracting neutrino dataset "neutrinos:gen_lvl" from generator level sample "Low Energy GENIE Simulation"
+[ WARNING] Converted `name` "reco_coszen reco_energy" to valid Python: "reco_coszenreco_energy"
+[ WARNING] Converted `name` "coszen energy" to valid Python: "coszenenergy"
+[ WARNING] TROOT::Append:0: RuntimeWarning: Replacing existing TH1: smearing_matrix (Potential memory leak).
+
+[    INFO] Unfolded reco sum 2302542.33078
+[    INFO] Setting mu_hole_ice upper sigma bound to 0.0249968968969 dimensionless
+[    INFO] including file /common/users/mandalia/programs/pisa/pisa/resources/settings/osc/nufitv20.cfg in cfg
+[    INFO] including file /common/users/mandalia/programs/pisa/pisa/resources/settings/osc/earth.cfg in cfg
+[    INFO] Extracting neutrino dataset "neutrinos:gen_lvl" from generator level sample "Low Energy GENIE Simulation"
+[ WARNING] Converted `name` "reco_coszen reco_energy" to valid Python: "reco_coszenreco_energy"
+[ WARNING] Converted `name` "coszen energy" to valid Python: "coszenenergy"
+[ WARNING] TROOT::Append:0: RuntimeWarning: Replacing existing TH1: smearing_matrix (Potential memory leak).
+
+[    INFO] Unfolded reco sum 2041847.67979
+[ WARNING] Directory "./images/syst_pulls/greco//mu_hole_ice" already exists
+[ WARNING] Directory "./images/syst_pulls/greco//mu_hole_ice/lower" already exists
+[ WARNING] Directory "./images/syst_pulls/greco//mu_hole_ice/upper" already exists
+[ WARNING] Directory "./images/syst_pulls/greco//mu_hole_ice/lower" already exists
+[    INFO] Reference map(s) derived from a MapSet stored on disk
+[    INFO] Test map(s) derived from a MapSet stored on disk
+[ WARNING] Overwriting file at './images/syst_pulls/greco//mu_hole_ice/lower/maps__baseline.json.bz2'
+[ WARNING] Overwriting file at './images/syst_pulls/greco//mu_hole_ice/lower/maps__-sigma.json.bz2'
+[    INFO] Map numu_cc+numubar_cc...
+[    INFO]   Ref map(s):
+[    INFO]     min   :     5103.56
+[    INFO]     max   :   158801.63
+[    INFO]     total :  2040983.85
+[    INFO]     mean  :    51024.60
+[    INFO]   Test map(s):
+[    INFO]     min   :     5219.51
+[    INFO]     max   :   382683.10
+[    INFO]     total :  2302542.33
+[    INFO]     mean  :    57563.56
+[    INFO]   Absolute fract. diff., abs((Test - Ref) / Ref):
+[    INFO]     max   : 1.5769e+00
+[    INFO]     mean  : 7.1498e-02
+[    INFO]     median: 1.6419e-02
+[    INFO]   Fractional difference, (Test - Ref) / Ref:
+[    INFO]     min   : -3.8464e-02
+[    INFO]     max   : 1.5769e+00
+[    INFO]     mean  : 6.4314e-02 +/- 2.4811e-01
+[    INFO]     median: 1.3466e-02 +/- 1.6419e-02
+[    INFO]   Difference, Test - Ref:
+[    INFO]     min   : -3.6851e+03
+[    INFO]     max   : 2.3418e+05
+[    INFO]     mean  : 6.5390e+03 +/- 3.6561e+04
+[    INFO]     median: 4.1497e+02 +/- 6.4248e+02
+[    INFO]   Asymmetry, (Test - Ref) / sqrt(Ref)
+[    INFO]     min   : -3.8464e-02
+[    INFO]     max   : 1.5769e+00
+[    INFO]     total : 6.1208e+02 (sum in quadrature)
+[    INFO] 
+[ WARNING] Overwriting file at './images/syst_pulls/greco//mu_hole_ice/lower/diff__-sigma__baseline.json.bz2'
+[ WARNING] Overwriting file at './images/syst_pulls/greco//mu_hole_ice/lower/fract_diff__-sigma___baseline.json.bz2'
+[ WARNING] Overwriting file at './images/syst_pulls/greco//mu_hole_ice/lower/asymm__-sigma___baseline.json.bz2'
+[ WARNING] Overwriting file at './images/syst_pulls/greco//mu_hole_ice/lower/stats__-sigma__baseline.json.bz2'
+[ WARNING] Directory "./images/syst_pulls/greco//mu_hole_ice/upper" already exists
+[    INFO] Reference map(s) derived from a MapSet stored on disk
+[    INFO] Test map(s) derived from a MapSet stored on disk
+[ WARNING] Overwriting file at './images/syst_pulls/greco//mu_hole_ice/upper/maps__baseline.json.bz2'
+[ WARNING] Overwriting file at './images/syst_pulls/greco//mu_hole_ice/upper/maps__+sigma.json.bz2'
+[    INFO] Map numu_cc+numubar_cc...
+[    INFO]   Ref map(s):
+[    INFO]     min   :     5103.56
+[    INFO]     max   :   158801.63
+[    INFO]     total :  2040983.85
+[    INFO]     mean  :    51024.60
+[    INFO]   Test map(s):
+[    INFO]     min   :     4644.15
+[    INFO]     max   :   159359.10
+[    INFO]     total :  2041847.68
+[    INFO]     mean  :    51046.19
+[    INFO]   Absolute fract. diff., abs((Test - Ref) / Ref):
+[    INFO]     max   : 1.5865e-01
+[    INFO]     mean  : 3.8426e-02
+[    INFO]     median: 3.1527e-02
+[    INFO]   Fractional difference, (Test - Ref) / Ref:
+[    INFO]     min   : -1.5865e-01
+[    INFO]     max   : 7.1189e-02
+[    INFO]     mean  : -4.8629e-03 +/- 5.2289e-02
+[    INFO]     median: 8.0465e-03 +/- 3.1527e-02
+[    INFO]   Difference, Test - Ref:
+[    INFO]     min   : -2.3561e+04
+[    INFO]     max   : 6.2341e+03
+[    INFO]     mean  : 2.1596e+01 +/- 4.3628e+03
+[    INFO]     median: 3.2519e+02 +/- 7.2928e+02
+[    INFO]   Asymmetry, (Test - Ref) / sqrt(Ref)
+[    INFO]     min   : -1.5865e-01
+[    INFO]     max   : 7.1189e-02
+[    INFO]     total : 8.2573e+01 (sum in quadrature)
+[    INFO] 
+[ WARNING] Overwriting file at './images/syst_pulls/greco//mu_hole_ice/upper/diff__+sigma__baseline.json.bz2'
+[ WARNING] Overwriting file at './images/syst_pulls/greco//mu_hole_ice/upper/fract_diff__+sigma___baseline.json.bz2'
+[ WARNING] Overwriting file at './images/syst_pulls/greco//mu_hole_ice/upper/asymm__+sigma___baseline.json.bz2'
+[ WARNING] Overwriting file at './images/syst_pulls/greco//mu_hole_ice/upper/stats__+sigma__baseline.json.bz2'

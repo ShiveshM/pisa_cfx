@@ -38,13 +38,13 @@ def parse_args():
     )
 
     parser.add_argument(
-        '-i', '--infile', type=fileio.is_valid_file, action=FullPaths,
+        '-i', '--infile', type=str, action=FullPaths,
         metavar='FILE',
         help='location/filename of the json file containing the MapSet'
     )
 
     parser.add_argument(
-        '-o', '--outdir', type=fileio.is_dir, action=FullPaths, metavar='DIR',
+        '-o', '--outdir', type=str, metavar='DIR',
         default='$PISA/pisa/images/cfx/',
         help='location onto which to store the plot'
     )
@@ -158,6 +158,7 @@ if __name__ == "__main__":
     assert len(input_MapSet) == 1
     input_Map = input_MapSet.pop()
 
+    fileio.mkdir(args.outdir, mode=0755)
     outfile = args.outdir + '/' + args.outname
     logging.info('outfile {0}'.format(outfile))
     plot_CFX_one(

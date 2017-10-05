@@ -70,6 +70,11 @@ def parse_args():
     )
 
     parser.add_argument(
+        '--name', type=str, default=None, metavar='STR',
+        help='name of map to select if MapSet contains more than 1 element'
+    )
+
+    parser.add_argument(
         '-v', '--verbose', action='count', default=0,
         help='set verbosity level'
     )
@@ -89,7 +94,11 @@ def plot_CFX_one(map, outfile, logy=False, ylim=None, ylabel=None):
             coszen_binning = bins.reco_coszen
             energy_binning = bins.reco_energy
         except:
-            raise ValueError('energy/coszen bins not found')
+            try:
+                coszen_binning = bins.true_coszen
+                energy_binning = bins.true_energy
+            except:
+                raise ValueError('energy/coszen bins not found')
     map.reorder_dimensions(
         MultiDimBinning([coszen_binning, energy_binning])
     )
@@ -155,8 +164,10 @@ if __name__ == "__main__":
 
     logging.info('Loading Map from file {0}'.format(args.infile))
     input_MapSet = MapSet.from_json(args.infile)
-    assert len(input_MapSet) == 1
-    input_Map = input_MapSet.pop()
+    if len(input_MapSet) > 1:
+        input_Map = input_MapSet[args.name]
+    else:
+        input_Map = input_MapSet.pop()
 
     fileio.mkdir(args.outdir, mode=0755)
     outfile = args.outdir + '/' + args.outname
